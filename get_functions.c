@@ -44,7 +44,6 @@ int _printf(const char *format, ...)
 			i--;
 		}
 }
-_putchar('\n');
 va_end(unknown_parameters);
 return (print);
 }
