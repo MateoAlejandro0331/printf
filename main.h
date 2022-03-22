@@ -9,10 +9,16 @@
 * Desc: Header file containing declarations for all functions
 * used in the _printf.
 */
+/**
+ * struct get - helps to match the parameters
+ *
+ * @shape: The operator
+ * @f: The function associated
+ */
 typedef struct get
 {
-    char *shape;
-    int (*f)(va_list);
+	char *shape;
+	int (*f)(va_list);
 } get_fun;
 
 int _printf(const char *format, ...);

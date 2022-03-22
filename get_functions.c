@@ -2,24 +2,24 @@
 /**
  * match_fun - match the function to print
  * @format: format parameters
- * @va_list: list of parameters
- * Return: match functon 
+ * Return: match functon
  */
- int (*match_fun (const char *format))(va_list)
- {
+int (*match_fun(const char *format))(va_list)
+{
 	get_fun type[] = {
 		{"c", get_char},
 		{"s", get_string},
 		{NULL, NULL}
 		};
 		int t;
+
 		for (t = 0; type[t].shape != NULL; t++)
 		{
 			if (*(type[t].shape) == *format)
 				break;
 		}
-		return (type[t].f);
- }
+	return (type[t].f);
+}
 
 /**
  * _printf - the same funtion printf form the standar library
@@ -28,11 +28,11 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0,print = 0;
+	int i = 0, print = 0;
 	int (*k)(va_list);
 	va_list unknown_parameters;
+
 	va_start(unknown_parameters, format);
-	
 	if (format == NULL)
 		return (-1);
 	while (format[i])
@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 		}
 		if (!format[i])
 		{
-			return(print);
+			return (print);
 		}
 		k = match_fun(&format[i + 1]);
 		if (k != NULL)
@@ -59,7 +59,7 @@ int _printf(const char *format, ...)
 		print++;
 		if (format[i + 1] == '%')
 		{
-			i +=2;
+			i += 2;
 		}
 		else
 		{
