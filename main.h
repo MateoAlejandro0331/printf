@@ -18,6 +18,7 @@ typedef struct get
 int _printf(const char *format, ...);
 int get_char(va_list c);
 int get_string(va_list s);
+int (*match_fun(const char *format))(va_list);
 int _putchar(char c);
 
 #endif
