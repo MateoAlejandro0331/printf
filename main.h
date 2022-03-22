@@ -1,12 +1,23 @@
 #ifndef MAIN_H
-#define MAIN_H	
+#define MAIN_H
+#include <stdio.h>
+#include <stdarg.h>
+#include <unistd.h>
 /*
 * File: main.h
 * Auth: Mateo López - Jhojan Perlaza
 * Desc: Header file containing declarations for all functions
 * used in the _printf.
 */
+typedef struct get
+{
+    char *shape;
+    int (*f)(va_list);
+} get_fun;
 
 int _printf(const char *format, ...);
+int get_char(va_list c);
+int get_string(va_list s);
+int _putchar(char c);
 
 #endif
