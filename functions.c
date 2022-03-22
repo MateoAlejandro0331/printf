@@ -18,7 +18,8 @@ int get_string(va_list s)
 {
 	int x;
 	char *string = va_arg(s, char *);
-
+	if (string == NULL)
+		string = "(null)";
 	for (x = 0; string[x]; x++)
 	{
 		_putchar(string[x]);
