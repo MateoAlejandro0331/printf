@@ -9,6 +9,8 @@ int (*match_fun(const char *format))(va_list)
 	get_fun type[] = {
 		{"c", get_char},
 		{"s", get_string},
+		{"d", get_int},
+		{"i", get_int},
 		{NULL, NULL}
 		};
 		int t;

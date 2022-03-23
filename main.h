@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdlib.h>
 /*
 * File: main.h
 * Auth: Mateo López - Jhojan Perlaza
@@ -24,6 +25,7 @@ typedef struct get
 int _printf(const char *format, ...);
 int get_char(va_list c);
 int get_string(va_list s);
+int get_int(va_list d);
 int (*match_fun(const char *format))(va_list);
 int _putchar(char c);
 

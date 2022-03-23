@@ -1,5 +1,15 @@
 #include "main.h"
 /**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+/**
  * get_char - prints characters
  * @c: character to print
  * Return: total characters
@@ -10,7 +20,7 @@ int get_char(va_list c)
 	return (1);
 }
 /**
- * get_string - prints characters
+ * get_string - prints string
  * @s: string to print
  * Return: total memebers of the string
  */
@@ -26,14 +36,4 @@ int get_string(va_list s)
 		_putchar(string[x]);
 	}
 	return (x);
-}
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
 }
