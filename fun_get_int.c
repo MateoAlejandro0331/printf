@@ -24,16 +24,15 @@ int get_int(va_list d)
 	int num = va_arg(d, int);
 	int aux = num, ndigit, pos = 0, dig = 0, i, auxsize = 1, pos1 = 0;
 
+	if (aux == 0)
+		return(1);
 	if (num < 0)
 	{
 		aux = aux * -1;
 		auxsize = 2;
 	}
-	for (ndigit = 0; aux >= 0; ndigit++)
+	for (ndigit = 0; aux > 0; ndigit++)
 	{
-		if (aux == 0)
-			return(1);
-		else
 		aux = aux / 10;
 	}
 	convert = malloc(sizeof(char) * ndigit + auxsize);
