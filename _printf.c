@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 			i += 2;
 			continue;
 		}
-		if (format[i + 1] != '\0')
+		if (format[i + 1] == '\0')
 			return (-1);
 		_putchar(format[i]);
 		print++;
