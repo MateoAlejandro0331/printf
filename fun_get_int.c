@@ -25,7 +25,10 @@ int get_int(va_list d)
 	int aux = num, ndigit, pos = 0, dig = 0, i, auxsize = 1, pos1 = 0;
 
 	if (aux == 0)
+	{
+		_putchar('0');
 		return(1);
+	}
 	if (num < 0)
 	{
 		aux = aux * -1;
