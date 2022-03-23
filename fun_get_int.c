@@ -1,20 +1,6 @@
 #include "main.h"
 /**
- * not_convert -  
- * @d: int to print
- * Return: total members of the int
- */
- int not_convert(char *convert)
- {
- 	if (!convert)
-	{
-		free(convert);
-		exit(-1);
-	}
-	return (0);
- }
-/**
- * get_int - convert a int to a string 
+ * get_int - convert a int to a string
  * @d: int to print
  * Return: total members of the int
  */
@@ -32,7 +18,6 @@ int get_int(va_list d)
 	for (ndigit = 0; aux > 0; ndigit++)
 		aux = aux / 10;
 	convert = malloc(sizeof(char) * ndigit + auxsize);
-	not_convert(convert);
 	if (num < 0)
 	{
 		ndigit++;
@@ -58,4 +43,3 @@ int get_int(va_list d)
 	free(convert);
 	return (ndigit);
 }
-
