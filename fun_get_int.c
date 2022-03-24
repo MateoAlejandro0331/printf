@@ -8,7 +8,7 @@ int not_convert(char *convert)
 {
 	if (!convert)
 	{
-		free(convert);
+		/*free(convert);*/
 		exit(-1);
 	}
 	return (0);
@@ -22,7 +22,8 @@ int get_int(va_list d)
 {
 	char *convert;
 	int num = va_arg(d, int);
-	int aux = num, ndigit, pos = 0, dig = 0, i, auxsize = 1, pos1 = 0;
+	unsigned int aux = num;
+	int ndigit, pos = 0, dig = 0, i, auxsize = 1, pos1 = 0;
 
 	if (aux == 0)
 	{
