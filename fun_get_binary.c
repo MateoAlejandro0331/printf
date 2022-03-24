@@ -5,7 +5,7 @@
  * @cont:counter
  * Return: number of characters printed
  */
-int recursion_binary(int n, int cont)
+int recursion_binary(unsigned int n, int cont)
 {
 	int cont_aux = 0;
 
@@ -24,7 +24,11 @@ int recursion_binary(int n, int cont)
 int get_binary(va_list b)
 {
 	int cont = 0;
-	int n = va_arg(b, int);
-
+	unsigned int n = va_arg(b, int);
+	if (n == 0)
+	{
+		_putchar('0');
+		return(1);
+	}
 	return (recursion_binary(n, cont));
 }
