@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * not_convert -  
- * @d: int to print
- * Return: total members of the int
+ *not_convert - is a function that checks the malloc
+ *@convert: malloc variable
+ *Return: 0 or -1
  */
 int not_convert(char *convert)
 {
@@ -23,17 +23,17 @@ int get_int(va_list d)
 	char *convert;
 	int num = va_arg(d, int);
 	unsigned int aux = num;
-	int ndigit, pos = 0, dig = 0, i, auxsize = 1, pos1 = 0;
+	int ndigit, pos = 0, dig = 0, i, auxsize = 0, pos1 = 0;
 
 	if (aux == 0)
 	{
 		_putchar('0');
-		return(1);
+		return (1);
 	}
 	if (num < 0)
 	{
 		aux = aux * -1;
-		auxsize = 2;
+		auxsize = 1;
 	}
 	for (ndigit = 0; aux > 0; ndigit++)
 		aux = aux / 10;
@@ -43,15 +43,11 @@ int get_int(va_list d)
 	{
 		ndigit++;
 		convert[0] = '-';
-		convert[ndigit] = '\0';
 		aux = num * -1;
 		pos1 = 1;
 	}
 	else if (num >= 0)
-	{
-		convert[ndigit] = '\0';
 		aux = num;
-	}
 	pos = ndigit - 1;
 	for (; pos >= pos1; pos--)
 	{
@@ -59,7 +55,7 @@ int get_int(va_list d)
 		aux = aux / 10;
 		convert[pos] = dig + '0';
 	}
-	for (i = 0; convert[i]; i++)
+	for (i = 0; i < ndigit; i++)
 		_putchar(convert[i]);
 	free(convert);
 	return (ndigit);
