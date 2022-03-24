@@ -1,0 +1,68 @@
+.TH _printf "25 March 2022" "1.0" "man page of _printf function"
+.SH _PRINTF()
+
+.SH NAME
+.B _printf - format and print data
+
+.SH SYNOPSIS
+.B #include "main.h"
+.B int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+- The _printf() function produces output according to the format, and this output is written to stdout, the standard output stream, and returns the number of characters printed.
+
+.SH RETURN
+-if successful, these functions return the number of characters printed (excluding the null byte).If the null return is unsuccessful, -1 is returned.
+
+.SH FORMAT OF THE STRING
+- The format string is a character string that is printed the same as it was written.
+
+.SH FLAG CHARACTERS
+- The character % is followed by zero or more of the following flags:
+.B %c
+- prints a character
+.br
+.B %%
+- Prints a %
+.br
+.B  %d & %i
+- Prints an integer
+.br
+.B %s
+- prints a string
+.br
+.B %b
+- prints a binary, custom specifier
+.br
+.B %o
+- Prints an octal number
+.br
+.B  %x
+- Prints a hexadecimal number
+.br
+.B %X
+- prints a hexadecimal in uppercase
+.br
+.B %u
+- prints a character
+.br
+.B %S
+- Prints a %
+.br
+.B  %p
+- Prints an address
+.br
+.B %r
+- prints a string in reverse
+.br
+.B %R
+- prints a string in rot13
+.br
+.SH EXAMPLE
+.Ip
+_printf("hello i am a student of %s and my age is %d years old", "holberton", 21);
+.IP
+$ "hello i am a student from holberton and my age is 21 years old."
+.br
+.SH AUTHOR
+JHOJAN DAVID PERLAZA and MATEO LOPEZ SAMACA
