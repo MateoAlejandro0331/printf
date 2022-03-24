@@ -4,6 +4,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <limits.h>
 /*
 * File: main.h
 * Auth: Mateo López - Jhojan Perlaza
@@ -26,6 +27,7 @@ int _printf(const char *format, ...);
 int get_char(va_list c);
 int get_string(va_list s);
 int get_int(va_list d);
+int get_binary(va_list b);
 int (*match_fun(const char *format))(va_list);
 int _putchar(char c);
 

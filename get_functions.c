@@ -11,6 +11,7 @@ int (*match_fun(const char *format))(va_list)
 		{"s", get_string},
 		{"d", get_int},
 		{"i", get_int},
+		{"b", get_binary},
 		{NULL, NULL}
 		};
 		int t;
