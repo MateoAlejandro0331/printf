@@ -8,7 +8,7 @@ int not_convert(char *convert)
 {
 	if (!convert)
 	{
-		/*free(convert);*/
+		free(convert);
 		exit(-1);
 	}
 	return (0);
@@ -36,9 +36,7 @@ int get_int(va_list d)
 		auxsize = 2;
 	}
 	for (ndigit = 0; aux > 0; ndigit++)
-	{
 		aux = aux / 10;
-	}
 	convert = malloc(sizeof(char) * ndigit + auxsize);
 	not_convert(convert);
 	if (num < 0)
