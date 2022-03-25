@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <limits.h>
+#include <string.h>
 /*
 * File: main.h
 * Auth: Mateo López - Jhojan Perlaza
@@ -29,6 +30,7 @@ int get_string(va_list s);
 int get_int(va_list d);
 int get_binary(va_list b);
 int (*match_fun(const char *format))(va_list);
+int get_revstr(va_list r);
 int _putchar(char c);
 
 #endif

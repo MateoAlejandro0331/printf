@@ -37,3 +37,23 @@ int get_string(va_list s)
 	}
 	return (x);
 }
+/**
+ * get_revstring - prints string
+ * @r: string to print
+ * Return: total memebers of the string
+ */
+int get_revstr(va_list r)
+{
+	int len = 0, lenaux;
+	char *string = va_arg(r, char *);
+
+	len = strlen(string);
+	lenaux = len;
+	if (string == NULL)
+		string = "(null)";
+	for (; len >= 0; len--)
+	{
+		_putchar(string[len]);
+	}
+	return (lenaux);
+}
