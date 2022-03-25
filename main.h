@@ -5,7 +5,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <limits.h>
-#include <string.h>
 /*
 * File: main.h
 * Auth: Mateo López - Jhojan Perlaza

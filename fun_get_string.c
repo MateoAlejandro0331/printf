@@ -44,11 +44,14 @@ int get_string(va_list s)
  */
 int get_revstr(va_list r)
 {
-	int len = 0, lenaux;
+	int len = 0, lenaux = 0;
 	char *string = va_arg(r, char *);
 
-	len = strlen(string);
+	for (len = 0; string[len]; len++)
+		;
 	lenaux = len;
+	if (string == NULL)
+		string = "(null)";
 	for (; len >= 0; len--)
 	{
 		_putchar(string[len]);
