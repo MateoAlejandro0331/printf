@@ -11,7 +11,7 @@ int recursion_binary(unsigned int n, int cont)
 
 	if (n)
 	{
-		cont_aux = (1 + recursion_binary(n / 2, cont + 1));
+		cont_aux = (1 + recursion_binary(n / 2, cont));
 		_putchar((n % 2) + '0');
 	}
 	return (cont_aux);
@@ -25,10 +25,11 @@ int get_binary(va_list b)
 {
 	int cont = 0;
 	unsigned int n = va_arg(b, int);
+
 	if (n == 0)
 	{
 		_putchar('0');
-		return(1);
+		return (1);
 	}
 	return (recursion_binary(n, cont));
 }
