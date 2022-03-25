@@ -38,7 +38,7 @@ int get_string(va_list s)
 	return (x);
 }
 /**
- * get_revstring - prints string
+ * get_revstr - prints string
  * @r: string to print
  * Return: total memebers of the string
  */
@@ -49,8 +49,6 @@ int get_revstr(va_list r)
 
 	len = strlen(string);
 	lenaux = len;
-	if (string == NULL)
-		string = "(null)";
 	for (; len >= 0; len--)
 	{
 		_putchar(string[len]);
